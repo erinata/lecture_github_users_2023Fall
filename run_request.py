@@ -24,20 +24,25 @@ response_text = github_session.get(access_point + "/rate_limit").text
 print(json.loads(response_text))
 
 for user_id in id_list:
-  
-  # user_id = "erinata"
-  print(user_id)
-  response_text = github_session.get(access_point 
-                     + "/users/" + user_id).text
-
-  json_text = json.loads(response_text)
-
   file_name = "json_files/" + user_id + ".json"
-  f = open(file_name, "w")
-  f.write(json.dumps(json_text))
-  f.close()
-  time.sleep(1)
   
+  if os.path.exists(file_name):
+    # pass
+    print("File exists: ", user_id)
+  else:
+  
+    # user_id = "erinata"
+    print(user_id)
+    response_text = github_session.get(access_point 
+                       + "/users/" + user_id).text
+
+    json_text = json.loads(response_text)
+
+    f = open(file_name, "w")
+    f.write(json.dumps(json_text))
+    f.close()
+    time.sleep(5)
+    
 
 
 
