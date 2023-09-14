@@ -30,17 +30,22 @@ for user_id in id_list:
     # pass
     print("File exists: ", user_id)
   else:
-  
-    # user_id = "erinata"
-    print(user_id)
-    response_text = github_session.get(access_point 
-                       + "/users/" + user_id).text
+    try:
+      # user_id = "erinata"
+      print(user_id)
+      response_text = github_session.get(access_point 
+                         + "/users/" + user_id).text
 
-    json_text = json.loads(response_text)
+      json_text = json.loads(response_text)
 
-    f = open(file_name, "w")
-    f.write(json.dumps(json_text))
-    f.close()
+      f = open(file_name + ".tmp", "w")
+      f.write(json.dumps(json_text))
+      f.close()
+      
+      os.rename(file_name + ".tmp", file_name)
+    except Exception as e:
+      print(e)
+      
     time.sleep(5)
     
 
