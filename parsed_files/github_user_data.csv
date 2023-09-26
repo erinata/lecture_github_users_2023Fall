@@ -1,2 +1,6 @@
-gh_id,gh_number_id,updated_at,followers
-dAAAb,1607280,2023-08-26T14:12:14Z,67
+gh_id,gh_number_id,updated_at,followers,followers_url
+tina1998612,19768276,2023-09-06T11:14:31Z,1050,https://api.github.com/users/tina1998612/followers
+dAAAb,1607280,2023-08-26T14:12:14Z,67,https://api.github.com/users/dAAAb/followers
+AdiChat,10634210,2023-07-16T16:01:40Z,3260,https://api.github.com/users/AdiChat/followers
+VinayMavani,32626935,2017-10-09T03:08:46Z,17,https://api.github.com/users/VinayMavani/followers
+RobinWu,12975,2022-03-15T06:26:52Z,33,https://api.github.com/users/RobinWu/followers
